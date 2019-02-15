@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+
 require('dotenv').config();
 
 const app = express();
@@ -19,8 +20,6 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true}, (err, db) => {
     console.log('Successful database connection');
   }
 });
-
-console.log(process.env.SECRET);
 
 app.listen(port, () => {
   console.log('server running on port: ' + port);
