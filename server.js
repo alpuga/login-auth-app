@@ -1,13 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express    = require('express');
+const mongoose   = require('mongoose');
 const bodyParser = require('body-parser');
-
+const passport   = require('passport');
 
 require('dotenv').config();
 
+const users = require('./routes/api/users');
+
 const app = express();
 
-const port = process.env.PORT || 3000;
 
 // Bodyparser middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -20,6 +21,17 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true}, (err, db) => {
     console.log('Successful database connection');
   }
 });
+
+//Passport middleware
+app.use(passport.initialize());
+
+//Passport config
+require('./config/passport')(passport);
+
+//routes
+app.use('/api/users', users);
+
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log('server running on port: ' + port);
