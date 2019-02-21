@@ -1,72 +1,34 @@
-# loginauthapp
-
-Login/Auth Application with MERN Stack.
-Using passport and JWTs
-
-Login client side with React and Redux for state management
-
-## Configuration
-
-Make sure to add your own `MONGOURI` from your [mLab](http://mlab.com) database in `config/keys.js`.
-
-```
-module.exports = {
-  mongoURI: "YOUR_MONGO_URI_HERE",
-  secretOrKey: "secret"
-};
-```
 # Login Auth MERN Application
 
-Login using passport and JWTs for authentication.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-var poop = poop;
-```
+Login/Register page using passport and JWTs for authentication.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+```javascript
+// Install dependencies for server & client
+npm install && npm run client-install
 
-Say what the step will be
+// Run client & server with concurrently
+npm run dev
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+// Server runs on http://localhost:8080 and client on http://localhost:3000
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+### Prerequisites
 
-## Running the tests
+This project uses the following technologies:
 
-Explain how to run the automated tests for this system
+- [React](https://reactjs.org) and [React Router](https://reacttraining.com/react-router/) for frontend
+- [Express](http://expressjs.com/) and [Node](https://nodejs.org/en/) for the backend
+- [MongoDB](https://www.mongodb.com/) for the database
+- [Redux](https://redux.js.org/basics/usagewithreact) for state management between React components
 
-### Break down into end to end tests
+## Configuration
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+Make sure to add your own `MONGO_URI` from your [mLab](http://mlab.com) database in `.env`.
 
 ```
-Give an example
+MONGO_URI=mongodb://<dbuser>:<dbpassword>@dsXXXXXX.mlab.com:XXXXX/database
 ```
 
 ## Deployment
@@ -79,26 +41,10 @@ Add additional notes about how to deploy this on a live system
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License
