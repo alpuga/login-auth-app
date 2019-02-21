@@ -25,11 +25,15 @@ This project uses the following technologies:
 
 ## Configuration
 
+Make a `.env` file where you will store your secret information like
+your `MONGO_URI` and your `SECRETORKEY` and any other sensitive information.
+
 Make sure to add your own `MONGO_URI` from your [mLab](http://mlab.com) database in `.env`.
 
 ```
 MONGO_URI=mongodb://<dbuser>:<dbpassword>@dsXXXXXX.mlab.com:XXXXX/database
 ```
+Also add your `SECRETORKEY` to your `.env`
 
 ## Versioning
 
