@@ -2,7 +2,7 @@
 
 Login/Register page using passport and JWTs for authentication.
 
-### Installing
+## Installing
 
 ```javascript
 // Install dependencies for server & client
@@ -14,7 +14,7 @@ npm run dev
 // Server runs on http://localhost:8080 and client on http://localhost:3000
 ```
 
-### Prerequisites
+## Built With
 
 This project uses the following technologies:
 
@@ -30,16 +30,6 @@ Make sure to add your own `MONGO_URI` from your [mLab](http://mlab.com) database
 ```
 MONGO_URI=mongodb://<dbuser>:<dbpassword>@dsXXXXXX.mlab.com:XXXXX/database
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Versioning
 
