@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { registerUser } from '../../actions/authActions';
-import classnames from 'classnames';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
+import classnames from "classnames";
 
 class Register extends Component {
   constructor() {
@@ -18,13 +18,13 @@ class Register extends Component {
   }
 
   componentDidMount() {
-    //if logged in and user navigates to Register page, should redirect to Dashboard
+    // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/dashboard');
+      this.props.history.push("/dashboard");
     }
   }
 
-  componentWillRecieveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
         errors: nextProps.errors
@@ -32,25 +32,25 @@ class Register extends Component {
     }
   }
 
-    onChange = e => {
-        this.setState({ [e.target.id]: e.target.value });
-      };
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-    onSubmit = e => {
-        e.preventDefault();
+  onSubmit = e => {
+    e.preventDefault();
 
-      const newUser = {
-            name: this.state.name,
-            email: this.state.email,
-            password: this.state.password,
-            password2: this.state.password2
-          };
-
-      this.props.registerUser(newUser,
-      this.props.history);
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
     };
-    render() {
-        const { errors } = this.state;
+    this.props.registerUser(newUser, this.props.history);
+  };
+
+  render() {
+    const { errors } = this.state;
+
     return (
       <div className="container">
         <div className="row">
@@ -73,56 +73,56 @@ class Register extends Component {
                   onChange={this.onChange}
                   value={this.state.name}
                   error={errors.name}
-                  id="name"
+                  name="name"
                   type="text"
-                  className={classnames('', {
+                  className={classnames("", {
                     invalid: errors.name
                   })}
                 />
                 <label htmlFor="name">Name</label>
-                <span className='red-text'>{errors.name}</span>
+                <span className="red-text">{errors.name}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.email}
                   error={errors.email}
-                  id="email"
+                  name="email"
                   type="email"
-                  className={classnames('', {
+                  className={classnames("", {
                     invalid: errors.email
                   })}
                 />
                 <label htmlFor="email">Email</label>
-                <span classNames='red-text'>{errors.email}</span>
+                <span className="red-text">{errors.email}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.password}
                   error={errors.password}
-                  id="password"
+                  name="password"
                   type="password"
-                  className={classnames('',{
+                  className={classnames("", {
                     invalid: errors.password
                   })}
                 />
                 <label htmlFor="password">Password</label>
-                <span className='red-text'>{errors.password}</span>
+                <span className="red-text">{errors.password}</span>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.password2}
                   error={errors.password2}
-                  id="password2"
+                  name="password2"
                   type="password"
-                  className={classnames('', {
+                  className={classnames("", {
                     invalid: errors.password2
                   })}
                 />
                 <label htmlFor="password2">Confirm Password</label>
-                <span classNames='red-text'>{errors.password2}</span>
+                <span className="red-text">{errors.password2}</span>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
