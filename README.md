@@ -27,9 +27,6 @@ This project uses the following technologies:
 
 ## Configuration
 
-Make a `.env` file where you will store your secret information like
-your `MONGO_URI` and your `SECRETORKEY` and any other sensitive information.
-
 You will need to create a keys_dev.js in the server config folder with
 
 ```
