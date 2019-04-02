@@ -13,7 +13,7 @@ npm install && npm run client-install
 // Run client & server with concurrently
 npm run dev
 
-// Server runs on http://localhost:8080 and client on http://localhost:3000
+// Server runs on http://localhost:5000 and client on http://localhost:3000
 ```
 
 ## Built With
@@ -30,13 +30,14 @@ This project uses the following technologies:
 Make a `.env` file where you will store your secret information like
 your `MONGO_URI` and your `SECRETORKEY` and any other sensitive information.
 
-Make sure to add your own `MONGO_URI` from your [mLab](http://mlab.com) database in `.env`.
+You will need to create a keys_dev.js in the server config folder with
 
 ```
-MONGO_URI=mongodb://<dbuser>:<dbpassword>@dsXXXXXX.mlab.com:XXXXX/database
+module.exports = {
+  mongoURI: 'YOUR_OWN_MONGO_URI',
+  secretOrKey: 'YOUR_OWN_SECRET'
+};
 ```
-
-Also add your `SECRETORKEY` to your `.env`
 
 ## Versioning
 
