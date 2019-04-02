@@ -1,6 +1,6 @@
 # Login Auth MERN Application
 
-<img src="https://user-images.githubusercontent.com/37851662/55369210-8cda8d80-54c3-11e9-9c97-675440cfc007.gif" alt="alt text">
+<img src="https://user-images.githubusercontent.com/37851662/55369527-ebecd200-54c4-11e9-83ea-42f397a722cd.gif" alt="alt text">
 
 Login/Register page using passport and JWTs for authentication.
 
